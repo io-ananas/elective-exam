@@ -1,0 +1,50 @@
+body {
+  font-family: "Rubik", sans-serif;
+  background: rgb(0, 0, 88);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 88, 1) 0%,
+    rgba(0, 0, 18, 1) 100%
+  );
+  color: white;
+  width: 100vw;
+  height: 100vh;
+}
+
+.line {
+  border-top: 1px solid white;
+  width: 150px;
+  opacity: 0.5;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5px;
+}
+form input {
+  background: transparent;
+  border: 1px solid #adadad;
+  height: 30px;
+  width: 300px;
+}
+
+input:focus {
+  outline: 2px solid #d95e06;
+  opacity: 0.8;
+}
+input:focus::-webkit-input-placeholder {
+  color: #d95e06;
+}
+form .signup {
+  padding: 0.7em;
+  width: 10%;
+  border: 1px solid white;
+  color: white;
+}
+
+form .signup:hover {
+  background: white;
+  color: black;
+}
