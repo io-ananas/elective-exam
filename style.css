@@ -1,0 +1,100 @@
+body {
+  font-family: "Rubik", sans-serif;
+  background: rgb(0, 0, 88);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 88, 1) 0%,
+    rgba(0, 0, 18, 1) 100%
+  );
+  color: white;
+  margin: 10px;
+}
+.section {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  overflow: hidden;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: orange;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.danskspill-logo {
+  grid-row: 1;
+  grid-column: 1;
+  width: 80%;
+  position: relative;
+  left: 20px;
+}
+.oddset-logo {
+  grid-row: 3;
+  grid-column: 2;
+  width: 140%;
+  position: relative;
+  left: 80px;
+}
+.intro-index {
+  grid-column: 2/6;
+  grid-row: 4;
+  font-size: 1.5em;
+  position: relative;
+  left: 80px;
+}
+
+.line-2 {
+  grid-column: 3;
+  grid-row: 2;
+  position: relative;
+  left: 60px;
+  top: 6px;
+  opacity: 0.2;
+}
+
+.line-1 {
+  grid-row: 4;
+  grid-column: 2;
+  position: relative;
+  right: 50px;
+}
+.line-3 {
+  grid-row: 6;
+  grid-column: 3;
+  position: relative;
+  left: 60px;
+  top: 6px;
+  opacity: 0.2;
+  color: beige;
+}
+.about-nav {
+  grid-column: 4/6;
+  grid-row: 6;
+  font-size: 1.7em;
+  opacity: 0.3;
+}
+.form-nav {
+  font-size: 1.7em;
+  opacity: 0.3;
+  grid-column: 4;
+  grid-row: 2;
+}
+.some-svg:hover {
+  color: orange;
+}
+.some-icons {
+  grid-row: 8;
+  grid-column: 1/3;
+  padding: 10px;
+}
+.some-svg {
+  width: 10px;
+  padding: 15px;
+}
