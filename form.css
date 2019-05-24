@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   background: rgb(0, 0, 88);
@@ -11,23 +15,77 @@ body {
   height: 100vh;
 }
 
+section {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+}
+.box-title {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  grid-column: 1/5;
+  margin: 0 auto;
+}
+.line-left {
+  grid-column: 1;
+  position: relative;
+  top: 55px;
+  left: -80px;
+}
+.line-right {
+  grid-column: 3;
+  position: relative;
+  top: -50px;
+  right: -80px;
+}
 .line {
   border-top: 1px solid white;
   width: 150px;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
+h1 {
+  font-size: 1.5em;
+  grid-column: 1/4;
+  text-align: center;
+}
+.logo-form {
+  width: 15%;
+  grid-column: 1/5;
+  margin: 0 auto;
+  position: relative;
+  top: -20px;
+  opacity: 0.95;
+}
+.info-form {
+  font-size: 0.8em;
+  grid-column: 1/5;
+  text-align: center;
+  position: relative;
+  top: -60px;
+}
+label {
+  position: relative;
+  top: 10px;
+}
 form {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-gap: 5px;
+  grid-gap: 8px;
+  grid-column: 1/5;
+  margin: 0 auto;
+  position: relative;
+  top: -75px;
 }
 form input {
   background: transparent;
   border: 1px solid white;
-  height: 30px;
-  width: 300px;
+  height: 35px;
+  width: 400px;
   padding-left: 10px;
   color: white;
 }
@@ -46,14 +104,19 @@ input:focus::-webkit-input-placeholder {
 }
 form .signup {
   padding: 0.7em;
-  width: 10%;
+  width: 20%;
   border: 1px solid white;
   color: white;
+  cursor: pointer;
+}
+.signup {
+  margin: 0 auto;
 }
 
 form .signup:hover {
   background: white;
   color: black;
+  transition: 0.5s;
 }
 
 /* style users display page*/
