@@ -118,15 +118,29 @@ form .signup:hover {
   color: black;
   transition: 0.5s;
 }
+.essai-template {
+  display: none;
+}
+.main-essai {
+  display: none;
+}
 
 /* style users display page*/
 
 article {
   font-size: 0.7em;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid white;
 }
 
 body.users-body {
   background: black;
+}
+
+.h1-template {
+  grid-column: 1;
+}
+.h2-template {
+  grid-column: 2;
 }

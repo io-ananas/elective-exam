@@ -15,7 +15,7 @@ function post(newUsers) {
     .then(res => res.json())
     .then(data => {
       form.elements.submit.disabled = false;
-      showTasks(data);
+      showUsers(data);
     });
 }
 
@@ -35,11 +35,11 @@ function get() {
     });
 }
 
-function showUsers(todolist) {
+function showUsers(oddsetUsers) {
   const template = document.querySelector("template").content;
   const clone = template.cloneNode(true);
-  clone.querySelector("h1").textContent = todolist.name;
-  clone.querySelector("h2").textContent = todolist.email;
+  clone.querySelector("h1").textContent = oddsetUsers.name;
+  clone.querySelector("h2").textContent = oddsetUsers.email;
 
   document.querySelector("main").appendChild(clone);
 }
