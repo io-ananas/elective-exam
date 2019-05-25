@@ -16,6 +16,8 @@ body {
   left: 0px;
 }
 
+/* ----- SVG Classes ----- */
+
 .st0 {
   fill: url(#SVGID_1_);
 }
@@ -230,4 +232,48 @@ body {
 }
 .st49 {
   opacity: 0.5;
+}
+
+/* ----- Animations start here ----- */
+
+/* Intro Game */
+
+#messi {
+  animation: moveRight 1.5s ease-in reverse forwards;
+}
+
+@keyframes moveRight {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(-75px);
+  }
+}
+
+#blob-vader {
+  animation: moveLeft 1.5s ease-in reverse forwards;
+}
+
+@keyframes moveLeft {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(75px);
+  }
+}
+
+#txt_make-move {
+  opacity: 0;
+  animation: appear 1.5s ease-in forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
