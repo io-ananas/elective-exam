@@ -17,12 +17,16 @@ function getComputerChoice() {
   // get random element with math.random between 0 and 2 but need to round down with Math.floor to get 3 numbers
   //   console.log(Math.floor(Math.random() * 3));
   const randomNumber = Math.floor(Math.random() * 3);
+  return choices[randomNumber];
 }
-getComputerChoice();
+// console.log(getComputerChoice());
 
 // Get the input of User
 function game(userChoice) {
   //   console.log("you clicked on " + userChoice);
+  const computerChoice = getComputerChoice();
+  console.log("user: " + userChoice);
+  console.log("computer: " + computerChoice);
 }
 
 function main() {
