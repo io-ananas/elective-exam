@@ -28,6 +28,7 @@ function userWin(userChoice, computerChoice) {
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = `${userChoice} beats ${computerChoice}. You win!`;
+  document.getElementById(userChoice).classList.add("green-win");
 }
 
 function userLose(userChoice, computerChoice) {
@@ -40,7 +41,7 @@ function userLose(userChoice, computerChoice) {
 
 function draw(userChoice, computerChoice) {
   //   console.log("draw");
-  result_p.innerHTML = `${userChoice} equals ${computerChoice}. Draw.`;
+  result_p.innerHTML = `${userChoice} equals ${computerChoice}. Keep it up.`;
 }
 
 // Get the input of User

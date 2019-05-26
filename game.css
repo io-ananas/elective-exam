@@ -309,3 +309,18 @@ body {
 .choice:hover {
   cursor: pointer;
 }
+
+#tackle > circle.green-win {
+  stroke: rgb(113, 182, 10);
+  stroke-width: 10px;
+}
+
+.orange-lose {
+  stroke: #dc5f11;
+  stroke-width: 10px;
+}
+
+.orange-lose {
+  stroke: #a0a0a0;
+  stroke-width: 10px;
+}
