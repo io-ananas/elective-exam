@@ -25,8 +25,30 @@ function getComputerChoice() {
 function game(userChoice) {
   //   console.log("you clicked on " + userChoice);
   const computerChoice = getComputerChoice();
-  console.log("user: " + userChoice);
-  console.log("computer: " + computerChoice);
+  //   console.log("user: " + userChoice);
+  //   console.log("computer: " + computerChoice);
+
+  switch (
+    userChoice + computerChoice //if user wins
+  ) {
+    case "tacklepass":
+    case "passheadshot":
+    case "headshottackle":
+      console.log("USER WINS");
+      break;
+    //if user loses
+    case "passtackle":
+    case "headshotpass":
+    case "tackleheadshot":
+      console.log("USER LOSES");
+      break;
+    //if equality
+    case "tackletackle":
+    case "passpass":
+    case "headshotheadshot":
+      console.log("EQUALITY");
+      break;
+  }
 }
 
 function main() {
