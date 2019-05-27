@@ -18,6 +18,23 @@ body {
 
   overflow: hidden;
 }
+
+.play {
+  grid-column: 5/8;
+  text-align: center;
+  grid-row: 6;
+  position: relative;
+  left: 30px;
+  top: 25px;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.card-game {
+  grid-column: 6/9;
+  grid-row: 2/6;
+  position: relative;
+  left: -100px;
+}
 a {
   color: white;
   text-decoration: none;
