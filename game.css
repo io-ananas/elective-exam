@@ -310,7 +310,7 @@ body {
   cursor: pointer;
 }
 
-#tackle > circle.green-win {
+.green-win {
   stroke: rgb(113, 182, 10);
   stroke-width: 10px;
 }

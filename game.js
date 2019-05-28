@@ -28,7 +28,10 @@ function userWin(userChoice, computerChoice) {
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = `${userChoice} beats ${computerChoice}. You win!`;
-  document.getElementById(userChoice).classList.add("green-win");
+  console.log(userChoice);
+  document
+    .querySelector(`#${userChoice.toLowerCase()} circle`)
+    .classList.add("green-win");
 }
 
 function userLose(userChoice, computerChoice) {
