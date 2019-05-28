@@ -1,6 +1,7 @@
 // Let's Cash = storing something for future use (in variables)
 let userScore = 0;
 let computerScore = 0;
+let delaySeconds = 1500;
 
 // DOM Variables - variables that stores DOM elements
 const userScore_span = document.getElementById("user-score");
@@ -32,6 +33,11 @@ function userWin(userChoice, computerChoice) {
   document
     .querySelector(`#${userChoice.toLowerCase()} circle`)
     .classList.add("green-win");
+  setTimeout(function() {
+    document
+      .querySelector(`#${userChoice.toLowerCase()} circle`)
+      .classList.remove("green-win");
+  }, delaySeconds);
 }
 
 function userLose(userChoice, computerChoice) {
@@ -40,6 +46,14 @@ function userLose(userChoice, computerChoice) {
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = `${userChoice} looses to ${computerChoice}. You lost...`;
+  document
+    .querySelector(`#${userChoice.toLowerCase()} circle`)
+    .classList.add("orange-lose");
+  setTimeout(function() {
+    document
+      .querySelector(`#${userChoice.toLowerCase()} circle`)
+      .classList.remove("orange-lose");
+  }, delaySeconds);
 }
 
 function draw(userChoice, computerChoice) {
