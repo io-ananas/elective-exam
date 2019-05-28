@@ -85,6 +85,7 @@ body {
   font-size: 18.5672px;
 }
 .st13 {
+  display: none;
   fill: url(#SVGID_4_);
 }
 .st14 {
@@ -95,12 +96,15 @@ body {
   mask: url(#SVGID_5_);
 }
 .st16 {
+  display: none;
   fill: #514204;
 }
 .st17 {
+  display: none;
   fill: #031123;
 }
 .st18 {
+  display: none;
   fill: url(#SVGID_6_);
 }
 .st19 {
@@ -111,6 +115,7 @@ body {
   mask: url(#SVGID_7_);
 }
 .st21 {
+  display: none;
   fill: url(#SVGID_8_);
 }
 .st22 {
@@ -175,6 +180,7 @@ body {
   stroke-miterlimit: 10;
 }
 .st35 {
+  display: none;
   fill: url(#SVGID_15_);
 }
 .st36 {
@@ -185,6 +191,7 @@ body {
   mask: url(#SVGID_16_);
 }
 .st38 {
+  display: none;
   fill: url(#SVGID_17_);
 }
 .st39 {
@@ -195,6 +202,7 @@ body {
   mask: url(#SVGID_18_);
 }
 .st41 {
+  display: none;
   fill: url(#SVGID_19_);
 }
 .st42 {
@@ -317,5 +325,10 @@ body {
 
 .orange-lose {
   stroke: #dc5f11;
+  stroke-width: 8px;
+}
+
+.gold-draw {
+  stroke: #ca9f11;
   stroke-width: 8px;
 }

@@ -59,6 +59,14 @@ function userLose(userChoice, computerChoice) {
 function draw(userChoice, computerChoice) {
   //   console.log("draw");
   result_p.innerHTML = `${userChoice} equals ${computerChoice}. Keep it up.`;
+  document
+    .querySelector(`#${userChoice.toLowerCase()} circle`)
+    .classList.add("gold-draw");
+  setTimeout(function() {
+    document
+      .querySelector(`#${userChoice.toLowerCase()} circle`)
+      .classList.remove("gold-draw");
+  }, delaySeconds);
 }
 
 // Get the input of User
