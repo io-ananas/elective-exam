@@ -144,3 +144,44 @@ a:hover {
   left: -100px;
   bottom: 50px;
 }
+
+/*About page*/
+.section-about {
+  height: 100vh;
+  width: 100vw;
+}
+.line-span {
+  border-top: 5px solid white;
+  width: 50px;
+  height: 10px;
+  position: relative;
+  top: 10px;
+  opacity: 0.3;
+}
+.basic-line {
+  width: 25px;
+}
+.box-line-2 {
+  display: grid;
+  grid-template-columns: 60px 100px;
+  margin-top: 20px;
+}
+.box-line-special {
+  display: grid;
+  grid-template-columns: 35px 100px;
+}
+.linkpageabout {
+  grid-column: 2;
+  position: relative;
+  opacity: 0.3;
+}
+
+.linkpageabout:hover {
+  color: white;
+  transition: 1s;
+}
+
+.highlight {
+  color: white;
+  opacity: 1;
+}
