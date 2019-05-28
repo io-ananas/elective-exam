@@ -26,9 +26,9 @@ function userWin(userChoice, computerChoice) {
   userScore++;
   //   console.log("WIN");
   //   console.log(userScore);
-  userScore_span.innerHTML = userScore;
-  computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML = `${userChoice} beats ${computerChoice}. You win!`;
+  userScore_span.textContent = userScore;
+  computerScore_span.textContent = computerScore;
+  result_p.textContent = `${userChoice} beats ${computerChoice}. You win!`;
   console.log(userChoice);
   document
     .querySelector(`#${userChoice.toLowerCase()} circle`)
@@ -38,14 +38,16 @@ function userWin(userChoice, computerChoice) {
       .querySelector(`#${userChoice.toLowerCase()} circle`)
       .classList.remove("green-win");
   }, delaySeconds);
+  let sound = document.getElementById("win-sound");
+  sound.play();
 }
 
 function userLose(userChoice, computerChoice) {
   //   console.log("loose");
   computerScore++;
-  userScore_span.innerHTML = userScore;
-  computerScore_span.innerHTML = computerScore;
-  result_p.innerHTML = `${userChoice} looses to ${computerChoice}. You lost...`;
+  userScore_span.textContent = userScore;
+  computerScore_span.textContent = computerScore;
+  result_p.textContent = `${userChoice} looses to ${computerChoice}. You lost...`;
   document
     .querySelector(`#${userChoice.toLowerCase()} circle`)
     .classList.add("orange-lose");
@@ -58,7 +60,7 @@ function userLose(userChoice, computerChoice) {
 
 function draw(userChoice, computerChoice) {
   //   console.log("draw");
-  result_p.innerHTML = `${userChoice} equals ${computerChoice}. Keep it up.`;
+  result_p.textContent = `${userChoice} equals ${computerChoice}. Keep it up.`;
   document
     .querySelector(`#${userChoice.toLowerCase()} circle`)
     .classList.add("gold-draw");
