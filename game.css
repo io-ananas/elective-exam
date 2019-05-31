@@ -4,13 +4,19 @@ body {
   border: 0;
   margin: 0;
   box-sizing: border-box;
+  width: 1480px;
+  height: auto;
 }
 
 #background,
 #logo,
-#interface,
-.score-board,
-.result {
+#interface {
+  position: relative;
+  width: 1450px;
+  height: auto;
+}
+
+div {
   position: relative;
 }
 
@@ -32,24 +38,28 @@ body {
   fill: url(#SVGID_2_);
 }
 .st2 {
+  fill: url(#SVGID_3_);
+}
+.st3 {
+  fill: #ffffff;
+}
+.st4 {
   fill: none;
-  stroke: url(#SVGID_3_);
+  stroke: url(#SVGID_4_);
   stroke-width: 7.7363;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
-.st3 {
+.st5 {
   fill: #ed1c24;
 }
-.st4 {
+.st6 {
   opacity: 0.7;
   fill: #f2f2f2;
+  enable-background: new;
 }
-.st5 {
-  fill: #ffffff;
-}
-.st6 {
+.st7 {
   fill: none;
   stroke: #000000;
   stroke-width: 1.5473;
@@ -57,18 +67,10 @@ body {
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
-.st7 {
+.st8 {
   fill: #003e99;
 }
-.st8 {
-  stroke: #000000;
-  stroke-width: 1.5473;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
-}
 .st9 {
-  fill: #ffffff;
   stroke: #000000;
   stroke-width: 1.5473;
   stroke-linecap: round;
@@ -76,102 +78,67 @@ body {
   stroke-miterlimit: 10;
 }
 .st10 {
-  fill: none;
+  fill: #ffffff;
+  stroke: #000000;
+  stroke-width: 1.5473;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
 }
 .st11 {
-  font-family: "Rubik-Bold";
+  fill: none;
 }
 .st12 {
-  font-size: 18.5672px;
+  enable-background: new;
 }
 .st13 {
-  display: none;
-  fill: url(#SVGID_4_);
+  fill: url(#SVGID_5_);
 }
 .st14 {
-  filter: url(#Adobe_OpacityMaskFilter);
-}
-.st15 {
-  opacity: 0.9;
-  mask: url(#SVGID_5_);
-}
-.st16 {
-  display: none;
-  fill: #514204;
-}
-.st17 {
-  display: none;
-  fill: #031123;
-}
-.st18 {
-  display: none;
   fill: url(#SVGID_6_);
 }
-.st19 {
-  filter: url(#Adobe_OpacityMaskFilter_1_);
+.st15 {
+  fill: url(#SVGID_7_);
 }
-.st20 {
-  opacity: 0.9;
-  mask: url(#SVGID_7_);
-}
-.st21 {
-  display: none;
-  fill: url(#SVGID_8_);
-}
-.st22 {
-  filter: url(#Adobe_OpacityMaskFilter_2_);
-}
-.st23 {
-  opacity: 0.9;
-  mask: url(#SVGID_9_);
-}
-.st24 {
-  font-size: 10.0572px;
-}
-.st25 {
-  fill: url(#SVGID_10_);
-}
-.st26 {
-  fill: url(#SVGID_11_);
-}
-.st27 {
+.st16 {
   fill: none;
-  stroke: url(#SVGID_12_);
+  stroke: url(#SVGID_8_);
   stroke-width: 7.7363;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
-.st28 {
+.st17 {
   fill: #f2f2f2;
 }
-.st29 {
+.st18 {
   fill: #c69c6d;
 }
-.st30 {
+.st19 {
   fill: #cccccc;
 }
-.st31 {
-  fill: url(#SVGID_13_);
+.st20 {
+  fill: url(#SVGID_9_);
   stroke: #000000;
   stroke-width: 2.3209;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
-.st32 {
-  fill: url(#SVGID_14_);
+.st21 {
+  fill: url(#SVGID_10_);
   stroke: #000000;
   stroke-width: 2.3209;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
-.st33 {
+.st22 {
   opacity: 0.7;
   fill: #1a1a1a;
+  enable-background: new;
 }
-.st34 {
+.st23 {
   fill: none;
   stroke: #000000;
   stroke-width: 2.3209;
@@ -179,52 +146,19 @@ body {
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
-.st35 {
-  display: none;
-  fill: url(#SVGID_15_);
-}
-.st36 {
-  filter: url(#Adobe_OpacityMaskFilter_3_);
-}
-.st37 {
-  opacity: 0.9;
-  mask: url(#SVGID_16_);
-}
-.st38 {
-  display: none;
-  fill: url(#SVGID_17_);
-}
-.st39 {
-  filter: url(#Adobe_OpacityMaskFilter_4_);
-}
-.st40 {
-  opacity: 0.9;
-  mask: url(#SVGID_18_);
-}
-.st41 {
-  display: none;
-  fill: url(#SVGID_19_);
-}
-.st42 {
-  filter: url(#Adobe_OpacityMaskFilter_5_);
-}
-.st43 {
-  opacity: 0.9;
-  mask: url(#SVGID_20_);
-}
-.st44 {
-  fill: url(#SVGID_21_);
+.st24 {
+  fill: url(#SVGID_11_);
   stroke: #ffffff;
   stroke-width: 6;
   stroke-miterlimit: 10;
 }
-.st45 {
-  fill: url(#SVGID_22_);
+.st25 {
+  fill: url(#SVGID_12_);
   stroke: #ffffff;
   stroke-width: 6;
   stroke-miterlimit: 10;
 }
-.st46 {
+.st26 {
   fill: none;
   stroke: #ffffff;
   stroke-width: 2.4838;
@@ -232,20 +166,20 @@ body {
   stroke-linejoin: round;
   stroke-miterlimit: 10;
 }
-.st47 {
-  fill: url(#SVGID_23_);
+.st27 {
+  fill: url(#SVGID_13_);
   stroke: #ffffff;
   stroke-width: 6;
   stroke-miterlimit: 10;
 }
-.st48 {
+.st28 {
   opacity: 0.5;
-  fill: url(#SVGID_24_);
-  stroke: #ffffff;
-  stroke-width: 1.7589;
-  stroke-miterlimit: 10;
+  enable-background: new;
 }
-.st49 {
+.st29 {
+  fill: url(#SVGID_14_);
+}
+.st30 {
   opacity: 0.5;
 }
 
@@ -301,8 +235,10 @@ body {
 
 .score-board {
   color: #051c3e;
-  margin: 21% 42% auto 42%;
-  font-size: 150px;
+  top: 260px;
+  left: 630px;
+  /* margin: 21% 42% auto 42%; */
+  font-size: 130px;
   /* display: grid;
   grid-template: "" "" "" "versus" "" "";
   grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
@@ -310,8 +246,10 @@ body {
 
 .result {
   color: white;
-  margin: 37% auto auto 25%;
-  font-size: 50px;
+  /* margin: 37% auto auto 25%; */
+  top: 440px;
+  left: 400px;
+  font-size: 45px;
 }
 
 .choice:hover {
