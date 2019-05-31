@@ -52,13 +52,15 @@ h1 {
   grid-column: 1/4;
   text-align: center;
 }
-.logo-form {
-  width: 15%;
+.logo-form-link {
   grid-column: 1/5;
-  margin: 0 auto;
+  text-align: center;
   position: relative;
   top: -20px;
   opacity: 0.95;
+}
+.logo-form {
+  width: 15%;
 }
 .info-form {
   font-size: 0.8em;
