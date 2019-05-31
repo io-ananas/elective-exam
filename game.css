@@ -16,14 +16,13 @@ body {
   height: auto;
 }
 
-div {
-  position: relative;
-}
-
 #logo,
 #interface,
 .score-board,
-.result {
+.result,
+.dot1,
+.dot2,
+.dot3 {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -173,14 +172,10 @@ div {
   stroke-miterlimit: 10;
 }
 .st28 {
-  opacity: 0.5;
   enable-background: new;
 }
 .st29 {
   fill: url(#SVGID_14_);
-}
-.st30 {
-  opacity: 0.5;
 }
 
 /* ----- Animations start here ----- */
@@ -269,4 +264,49 @@ div {
 .gold-draw {
   stroke: #ca9f11;
   stroke-width: 8px;
+}
+
+#rules {
+  opacity: 0.5;
+}
+
+#rules:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.dot1,
+.dot2,
+.dot3 {
+  height: 160px;
+  width: 160px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-box-shadow: 0px 0px 40px rgb(255, 255, 255);
+  box-shadow: 0px 0px 40px rgb(255, 255, 255);
+  animation: blink 1s infinite alternate;
+}
+
+.dot1 {
+  top: 600px;
+  left: 420px;
+}
+
+.dot2 {
+  top: 600px;
+  left: 650px;
+}
+.dot3 {
+  top: 600px;
+  left: 890px;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
 }
