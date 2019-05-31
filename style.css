@@ -11,7 +11,11 @@ body {
   );
   color: white;
   margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
 }
+
 .section {
   width: 100vw;
   height: 100vh;
@@ -20,6 +24,7 @@ body {
   grid-template-rows: 1fr;
   overflow: hidden;
 }
+
 .rightside {
   grid-column: 1/2;
   grid-row: 1;
@@ -29,7 +34,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  z-index: 10;
 }
 
 .leftside {
@@ -63,7 +67,7 @@ body {
 a {
   color: white;
   text-decoration: none;
-  z-index: 1000;
+  z-index: 2;
 }
 .link {
   opacity: 0.3;
