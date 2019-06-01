@@ -106,6 +106,15 @@ input:focus {
 input:focus::-webkit-input-placeholder {
   color: #d95e06;
 }
+
+input:valid {
+  border: 1px solid white;
+  color: white;
+}
+input:invalid {
+  color: orange;
+}
+
 form .signup {
   padding: 0.7em;
   width: 20%;
