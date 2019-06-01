@@ -84,7 +84,7 @@ a {
   transition: 1s;
 }
 a:hover {
-  color: orange;
+  color: #db5e11;
   opacity: 1;
 }
 .box-line {
@@ -249,7 +249,7 @@ a:hover {
   }
   20% {
     color: orange;
-    text-shadow: 0 0 7px #fff900, 0 0 15px #ff6c00;
+    text-shadow: 0 0 7px #fff900, 0 0 15px #db5e11;
   }
   30% {
     color: white;
@@ -257,7 +257,7 @@ a:hover {
   }
   35% {
     color: orange;
-    text-shadow: 0 0 7px #fff900, 0 0 15px #ff6c00;
+    text-shadow: 0 0 7px #fff900, 0 0 15px #db5e11;
   }
   70% {
     color: orange;
@@ -265,7 +265,7 @@ a:hover {
   }
   85% {
     color: orange;
-    text-shadow: 0 0 7px #fff900, 0 0 15px #ff6c00;
+    text-shadow: 0 0 7px #fff900, 0 0 15px #db5e11;
   }
   90% {
     color: white;
