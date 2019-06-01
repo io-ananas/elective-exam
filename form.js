@@ -20,14 +20,16 @@ function post(newUsers) {
         const generalError = data.message;
         const field = data.list[0].field;
         const specificError = data.list[0].message[0];
-        console.log(generalError, specificError, field);
-        console.log("the " + field + specificError);
+        // console.log(generalError, specificError, field);
+        // console.log("the " + field + specificError);
         //TODO: show error
+        alert("The " + field + " " + specificError);
       } else {
         //happy
         form.style.display = "none";
-        document.querySelector(".main-essai").style.display = "block";
-        document.querySelector(".main-essai span").textContent = newUsers.name;
+        document.querySelector(".validated-page ").style.display = "block";
+        document.querySelector(".validated-page  span").textContent =
+          newUsers.name;
       }
       /*form.elements.submit.disabled = false;
       showUsers(data);*/

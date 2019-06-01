@@ -26,7 +26,13 @@
       <p class="info-form">Udbydes af Danske Licens Spil A/S</p>
       <form action="">
         <label for="Name" class="name" name="Name">Name*</label>
-        <input required id="Name" type="text" placeholder="Zinedine Z" />
+        <input
+          required
+          id="Name"
+          pattern="a-zA-Z0-9]+"
+          type="text"
+          placeholder="Zinedine Z"
+        />
         <label for="Email" class="email" name="Email">Email*</label>
         <input
           required
@@ -35,21 +41,32 @@
           placeholder="zinedine@email.com"
         />
 
-        <label for="Password" class="password">Password*</label>
+        <label for="Password" class="password"
+          >Password*
+          <span class="min-characteres">8 characters min.</span></label
+        >
         <input
           required
           id="Password"
           type="password"
           name="Password"
           placeholder="********"
+          pattern=".{8,}"
         />
         <br />
         <input class="signup" type="submit" name="submit" />
       </form>
-      <main class="main-essai">
+      <main class="validated-page">
         <section class="success">
-          <h1>Amazing</h1>
-          <p>Thank you <span></span></p>
+          <div class="message-form-validated">
+            <h1>Your registration is now submitted</h1>
+            <p>Thank you <span></span></p>
+            <a
+              class="linkpagesuccess-oddset"
+              href="https://danskespil.dk/oddset"
+              >Go to the website ></a
+            >
+          </div>
         </section>
       </main>
       <!--<template class="essai-template">

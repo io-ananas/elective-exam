@@ -14,7 +14,9 @@ body {
   width: 100vw;
   height: 100vh;
 }
-
+a {
+  text-decoration: none;
+}
 .section-form {
   display: grid;
   height: 100vh;
@@ -120,29 +122,46 @@ form .signup:hover {
   color: black;
   transition: 0.5s;
 }
-.essai-template {
-  display: none;
-}
-.main-essai {
-  display: none;
-}
 
-/* style users display page*/
-
-article {
+.min-characteres {
   font-size: 0.7em;
+  margin-left: 220px;
+  opacity: 0.7;
+}
+
+/*  page style  when form validated and submitted */
+.validated-page {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 88, 1) 0%,
+    rgba(0, 0, 18, 1) 100%
+  );
+}
+.success {
+  width: 100vw;
+  height: 100vw;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid white;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
 }
-
-body.users-body {
-  background: black;
+.message-form-validated {
+  grid-column: 1/5;
+  grid-row: 2;
+  text-align: center;
+  position: relative;
+  bottom: 100px;
 }
-
-.h1-template {
-  grid-column: 1;
+.linkpagesuccess-oddset {
+  color: white;
+  opacity: 0.3;
 }
-.h2-template {
-  grid-column: 2;
+.linkpagesuccess-oddset:hover {
+  color: orange;
+  opacity: 1;
+  transition: 1s;
 }
