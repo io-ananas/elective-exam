@@ -35,13 +35,17 @@
           placeholder="zinedine@email.com"
         />
 
-        <label for="Password" class="password">Password*</label>
+        <label for="Password" class="password"
+          >Password*
+          <span class="min-characteres">8 characters min.</span></label
+        >
         <input
           required
           id="Password"
           type="password"
           name="Password"
           placeholder="********"
+          pattern=".{8,}"
         />
         <br />
         <input class="signup" type="submit" name="submit" />
