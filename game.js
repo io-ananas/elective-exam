@@ -56,6 +56,8 @@ function userLose(userChoice, computerChoice) {
       .querySelector(`#${userChoice.toLowerCase()} circle`)
       .classList.remove("orange-lose");
   }, delaySeconds);
+  let sound = document.getElementById("lose-sound");
+  sound.play();
 }
 
 function draw(userChoice, computerChoice) {
@@ -69,6 +71,8 @@ function draw(userChoice, computerChoice) {
       .querySelector(`#${userChoice.toLowerCase()} circle`)
       .classList.remove("gold-draw");
   }, delaySeconds);
+  let sound = document.getElementById("draw-sound");
+  sound.play();
 }
 
 // Get the input of User
