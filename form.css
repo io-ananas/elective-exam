@@ -99,7 +99,7 @@ form input {
 }
 
 input:focus {
-  outline: 3px solid #d95e06;
+  outline: 1px solid white;
   opacity: 0.8;
 }
 
@@ -110,7 +110,9 @@ input:focus::-webkit-input-placeholder {
 input:valid {
   border: 1px solid white;
   color: white;
+  background: transparent;
 }
+
 input:invalid {
   color: orange;
 }
