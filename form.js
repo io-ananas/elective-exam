@@ -1,7 +1,17 @@
 const data = {};
 const form = document.querySelector("form");
 ("use strict");
-
+/*
+//Js validity
+form.elements.Email.addEventListener("blur", e => {
+  if (form.elements.Email.checkValidity()) {
+    console.log("correct");
+  } else {
+    console.log("please add an email");
+    alert("please add an email in order to register");
+  }
+});
+*/
 function post(newUsers) {
   fetch("https://testdb-6ac0.restdb.io/rest/oddset-users", {
     method: "post",
