@@ -24,12 +24,19 @@
         ><img class="logo-form" src="assets/oddset-white.svg" alt=""
       /></a>
       <p class="info-form">Udbydes af Danske Licens Spil A/S</p>
-      <form action="">
-        <label for="Name" class="name" name="Name">Name*</label>
-        <input required id="Name" type="text" placeholder="Zinedine Z" />
-        <label for="Email" class="email" name="Email">Email*</label>
+      <form>
+        <label for="Name" class="name">Name*</label>
         <input
           required
+          id="Name"
+          name="Name"
+          type="text"
+          placeholder="Zinedine Z"
+        />
+        <label for="Email" class="email">Email*</label>
+        <input
+          required
+          name="Email"
           id="Email"
           type="email"
           placeholder="zinedine@real.es"
@@ -53,7 +60,7 @@
       <main class="validated-page">
         <section class="success">
           <div class="message-form-validated">
-            <h1>Your registration is now submitted</h1>
+            <h1 class="reg-subm">Your registration is now submitted</h1>
             <p>Thank you <span></span></p>
             <a
               class="linkpagesuccess-oddset"

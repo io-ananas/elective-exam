@@ -1,312 +1,696 @@
 * {
   box-sizing: border-box;
 }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
 body {
-  font-family: "Rubik", sans-serif;
-  background: rgb(0, 0, 88);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 88, 1) 0%,
-    rgba(0, 0, 18, 1) 100%
-  );
-  color: white;
-  margin: 0 auto;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
+  line-height: 1;
 }
-
-.section {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  overflow: hidden;
+ol,
+ul {
+  list-style: none;
 }
-
-.rightside {
-  grid-column: 1/2;
-  grid-row: 1;
-  background-color: transparent;
-  height: 100vh;
-  width: 50vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+blockquote,
+q {
+  quotes: none;
 }
-
-.leftside {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  background-color: transparent;
-  height: 100vh;
-  width: 50vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
-.play {
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-style: italic;
-  grid-row: 2;
-  grid-column: 1/3;
-  top: 150px;
-  margin: 0 auto;
-  z-index: 1;
-  position: relative;
-  font-size: inherit;
-  font-family: inherit;
-  color: white;
-  text-align: center;
-  padding-top: 10px;
-  border: 1px solid white;
-  overflow: hidden;
-  transition: color 0.4s ease-in-out;
-  width: 90px;
-  height: 40px;
-}
-
-.play::before {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
-  z-index: -1;
-  position: absolute;
-  top: 100%;
-  right: 100%;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  background-color: white;
-  transform-origin: center;
-  transform: translate(50%, -50%) scale(0);
-  transition: transform 0.45s ease-in-out;
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-.play:hover {
-  cursor: pointer;
-  color: #000058;
-}
-
-.play:hover::before {
-  transform: translate(50%, -50%) scale(15);
-}
-.card-game {
-  grid-column: 1/3;
-  grid-row: 1/3;
-  position: relative;
-  top: 140px;
-  left: 25px;
-  width: 69%;
-  margin: 0 auto;
-}
-a {
-  color: white;
-  text-decoration: none;
-  z-index: 2;
-}
-.link {
-  opacity: 0.3;
-  color: white;
-  position: relative;
-  left: -50px;
-}
-.link:hover {
-  color: white;
-  transition: 1s;
-}
-a:hover {
-  color: #db5e11;
-  opacity: 1;
-}
-.box-line {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100%;
-  width: 300px;
-}
-.line {
-  border-top: 8px solid white;
-  width: 80px;
-  position: relative;
-  top: 15px;
-  opacity: 0.3;
-}
-.oddset-line {
-  border-top: 9px solid white;
-  width: 80px;
-  grid-row: 3/4;
-  grid-column: 2;
-  position: relative;
-  top: 50px;
-  left: -60px;
-}
-
-.danskspill-logo {
-  grid-row: 1;
-  grid-column: 1;
-  width: 20%;
-  position: relative;
-  margin-top: 20px;
-  margin-left: 30px;
-}
-.oddset-logo {
-  grid-row: 3;
-  grid-column: 2/8;
-  width: 50%;
-  position: relative;
-  left: 60px;
-  bottom: 25px;
-}
-.intro-index {
-  grid-column: 2/8;
-  grid-row: 3;
-  font-size: 1.5em;
-  position: relative;
-  left: 60px;
-  top: 40px;
-}
-
-.about-nav {
-  grid-column: 4/8;
-  grid-row: 2;
-  font-size: 1.7em;
-  position: relative;
-  top: 20px;
-  left: -100px;
-  animation: animation-translate-x;
-  animation-duration: 2s;
-}
-
-.form-nav {
-  font-size: 1.7em;
-  grid-column: 4/8;
-  grid-row: 5;
-  position: relative;
-  left: -100px;
-  bottom: 50px;
-  animation: animation-translate-x;
-  animation-delay: 1s;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-/*About page*/
-.section-about {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-}
-.about-logo {
-  grid-column: 1/5;
-  grid-row: 1;
-}
-.oddset-about {
-  width: 60%;
-}
-.navigation {
-  grid-column: 1;
-  grid-row: 3/7;
-}
-.line-span {
-  border-top: 5px solid white;
-  width: 50px;
-  height: 10px;
-  position: relative;
-  top: 10px;
-  opacity: 0.3;
-}
-.basic-line {
-  width: 25px;
-}
-.box-line-2 {
-  display: grid;
-  grid-template-columns: 60px 100px;
-  margin-top: 20px;
-}
-.box-line-special {
-  display: grid;
-  grid-template-columns: 35px 100px;
-}
-.linkpageabout {
-  grid-column: 2;
-  position: relative;
-  opacity: 0.3;
-}
-
-.linkpageabout:hover {
-  color: white;
-  transition: 1s;
-}
-
-.highlight {
-  color: white;
-  opacity: 1;
-}
-.box1-about-page {
-  grid-column: 3/5;
-  grid-row: 3 /5;
-}
-.paragraphe2-about {
-  grid-column: 6/8;
-  grid-row: 3/7;
-}
-.link-official-website {
-  grid-row: 6;
-  grid-column: 6/8;
-}
-
-@keyframes animation-translate-x {
-  from {
-    opacity: 0;
-    transform: translateX(-500px);
+/* Mobile*/
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    font-family: "Rubik", sans-serif;
+    background: rgb(0, 0, 88);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 88, 1) 0%,
+      rgba(0, 0, 18, 1) 100%
+    );
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
   }
-  to {
+  a {
+    color: white;
+    text-decoration: none;
+    z-index: 50;
+  }
+  .danskspill-logo {
+    display: none;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+  }
+  .oddset-logo {
+    width: 100%;
+    grid-row: 1/2;
+    grid-column: 1/4;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .intro-index {
+    grid-row: 3/4;
+    grid-column: 1/4;
+    text-align: center;
+    align-self: center;
+    font-size: 1.4em;
+  }
+
+  .box-card-game {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    z-index: 3;
+  }
+  .background-ellipse-mobile {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    width: 200%;
+    justify-self: center;
+    align-self: center;
+    z-index: 1;
+  }
+
+  .card-game {
+    width: 100%;
+  }
+  .play {
+    display: none;
+  }
+  .play-mobile {
+    grid-row: 4/5;
+    grid-column: 1/3;
+    align-self: center;
+    font-size: 1.2em;
+    margin-left: 50px;
+  }
+  .form-nav {
+    display: none;
+  }
+  .about-nav {
+    grid-row: 4/5;
+    grid-column: 3/4;
+    align-self: center;
+    font-size: 1.2em;
+  }
+  .barre-mobile {
+    grid-row: 4;
+    grid-column: 1/4;
+    margin: 0 auto;
+    align-self: center;
+  }
+
+  /*about page mobile*/
+  .box1-about-page {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 auto;
+    font-size: 1.1em;
+  }
+
+  .oddset-img-link-about {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .paragraphe2-about {
+    grid-column: 1/4;
+    grid-row: 3/6;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-size: 1.1em;
+    position: relative;
+    top: -50px;
+  }
+  .link-official-website {
+    display: none;
+  }
+  .navigation {
+    grid-column: 1/4;
+    grid-row: 4/5;
+    display: grid;
+    align-self: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    z-index: 10;
+  }
+  .about-link-mobile {
+    display: none;
+  }
+  .home-link-mobile {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.2em;
+  }
+  .signup-link-mobile {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.2em;
+  }
+}
+
+/* medium devices*/
+
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-family: "Rubik", sans-serif;
+    background: rgb(0, 0, 88);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 88, 1) 0%,
+      rgba(0, 0, 18, 1) 100%
+    );
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    z-index: 50;
+  }
+  .danskspill-logo {
+    display: none;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+  }
+  .oddset-logo {
+    width: 100%;
+    grid-row: 1/2;
+    grid-column: 1/5;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .background-ellipse-mobile {
+    display: none;
+  }
+  .intro-index {
+    grid-row: 3/4;
+    grid-column: 1/5;
+    text-align: center;
+    align-self: center;
+    font-size: 1.4em;
+  }
+
+  .box-card-game {
+    grid-row: 2/3;
+    grid-column: 1/5;
+    text-align: center;
+    z-index: 30;
+  }
+  .card-game {
+    width: 80%;
+    z-index: 30;
+  }
+  .play {
+    display: none;
+  }
+  .play-mobile {
+    grid-row: 4;
+    grid-column: 1/3;
+    align-self: center;
+    font-size: 1.3em;
+    justify-self: center;
+  }
+  .form-nav {
+    display: none;
+  }
+  .about-nav {
+    grid-row: 4;
+    grid-column: 3/5;
+    align-self: center;
+    font-size: 1.3em;
+    justify-self: center;
+  }
+  .barre-mobile {
+    grid-row: 4;
+    grid-column: 1/5;
+    margin: 0 auto;
+    align-self: center;
+  }
+
+  /*about page mobile*/
+  .box1-about-page {
+    grid-column: 1/5;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 auto;
+    font-size: 1.1em;
+  }
+  .oddset-img-link-about {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .paragraphe2-about {
+    grid-column: 1/5;
+    grid-row: 3/6;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-size: 1.1em;
+    position: relative;
+    top: -50px;
+  }
+  .link-official-website {
+    display: none;
+  }
+  .navigation {
+    grid-column: 1/5;
+    grid-row: 4/5;
+    display: grid;
+    align-self: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    z-index: 10;
+  }
+  .about-link-mobile {
+    display: none;
+  }
+  .home-link-mobile {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.3em;
+  }
+  .signup-link-mobile {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.3em;
+  }
+}
+/*Desktop large screen versions*/
+
+@media (min-width: 980px) {
+  body {
+    font-family: "Rubik", sans-serif;
+    background: rgb(0, 0, 88);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 88, 1) 0%,
+      rgba(0, 0, 18, 1) 100%
+    );
+    color: white;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .background-ellipse-mobile {
+    display: none;
+  }
+  .barre-mobile {
+    display: none;
+  }
+  .section {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    overflow: hidden;
+  }
+
+  .play {
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-style: italic;
+    z-index: 1;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    border: 1px solid white;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+    width: 90px;
+    height: 40px;
+    z-index: 10;
+    justify-self: center;
+  }
+  .play-mobile {
+    display: none;
+  }
+
+  .play::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: white;
+    transform-origin: center;
+    transform: translate(50%, -50%) scale(0);
+    transition: transform 0.45s ease-in-out;
+  }
+
+  .play:hover {
+    cursor: pointer;
+    color: #000058;
+  }
+
+  .play:hover::before {
+    transform: translate(50%, -50%) scale(15);
+  }
+  .box-card-game {
+    grid-column: 5/9;
+    grid-row: 3/9;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .card-game {
+    width: 70%;
+    grid-column: 1/2;
+    justify-self: center;
+  }
+
+  .link {
+    opacity: 0.3;
+    color: white;
+    position: relative;
+    left: -50px;
+    z-index: 10;
+  }
+  .link:hover {
+    color: white;
+    transition: 1s;
+    z-index: 30;
     opacity: 1;
-    transform: translateX(0px);
   }
-}
 
-@keyframes animate {
-  0% {
-    color: orange;
-    text-shadow: none;
+  .box-line {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    width: 300px;
   }
-  18% {
+  .line {
+    border-top: 6px solid white;
+    width: 80px;
+    position: relative;
+    top: 12px;
+    opacity: 0.3;
+  }
+  .oddset-line {
+    border-top: 6px solid white;
+    width: 80px;
+    grid-row: 5;
+    grid-column: 1;
+    position: relative;
+    top: 10px;
+    left: 100px;
+  }
+
+  .danskspill-logo {
+    grid-row: 1;
+    grid-column: 1;
+    width: 80%;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  .oddset-logo {
+    grid-row: 4/8;
+    grid-column: 2/5;
+    position: relative;
+    margin-left: 70px;
+  }
+  .oddset-img {
+    width: 65%;
+  }
+  .intro-index {
+    grid-column: 2/5;
+    grid-row: 5/8;
+    font-size: 1.4em;
+    margin-left: 70px;
+    position: relative;
+  }
+
+  .about-nav {
+    grid-column: 3/5;
+    grid-row: 3;
+    font-size: 1.5em;
+    animation: animation-translate-x;
+    animation-duration: 2s;
+    position: relative;
+    margin-left: 80px;
+  }
+
+  .form-nav {
+    font-size: 1.5em;
+    grid-column: 3/5;
+    grid-row: 7;
+    position: relative;
+
+    animation: animation-translate-x;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    top: 20px;
+    margin-left: 80px;
+  }
+  .reward {
+    font-size: 0.7em;
     color: white;
-    text-shadow: none;
   }
-  20% {
-    color: orange;
-    text-shadow: 0 0 7px #fff900, 0 0 15px #db5e11;
+
+  /*About page*/
+  .section-about {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
   }
-  30% {
+  .about-logo {
+    grid-column: 1/5;
+    grid-row: 1;
+    width: 20%;
+  }
+  .oddset-about {
+    width: 70%;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .navigation {
+    grid-column: 1;
+    grid-row: 3/7;
+    position: relative;
+    top: -30px;
+  }
+  .line-span {
+    border-top: 5px solid white;
+    width: 50px;
+    height: 10px;
+    position: relative;
+    top: 10px;
+    opacity: 0.3;
+  }
+  .basic-line {
+    width: 25px;
+  }
+  .box-line-2 {
+    display: grid;
+    grid-template-columns: 60px 100px;
+    margin-top: 20px;
+  }
+  .box-line-special {
+    display: grid;
+    grid-template-columns: 35px 100px;
+  }
+  .linkpageabout {
+    grid-column: 2;
+    position: relative;
+    opacity: 0.3;
+  }
+
+  .linkpageabout:hover {
     color: white;
-    text-shadow: none;
+    transition: 1s;
   }
-  35% {
-    color: orange;
-    text-shadow: 0 0 7px #fff900, 0 0 15px #db5e11;
-  }
-  70% {
-    color: orange;
-    text-shadow: none;
-  }
-  85% {
-    color: orange;
-    text-shadow: 0 0 7px #fff900, 0 0 15px #db5e11;
-  }
-  90% {
+
+  .highlight {
     color: white;
-    text-shadow: none;
+    opacity: 1;
   }
-  100% {
-    color: white;
-    text-shadow: none;
+  .box1-about-page {
+    grid-column: 3/5;
+    grid-row: 3 /5;
+    position: relative;
+    top: -30px;
+  }
+  .paragraphe2-about {
+    grid-column: 6/8;
+    grid-row: 3/7;
+  }
+  .link-official-website {
+    grid-row: 6;
+    grid-column: 6/8;
+  }
+
+  @keyframes animation-translate-x {
+    from {
+      opacity: 0;
+      transform: translateX(-500px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
   }
 }
