@@ -248,12 +248,12 @@
 
 /* First Breakpoint - Desktop */
 
-@media screen and (min-width: 1280px) {
+@media (min-width: 1080px) {
   body {
     border: 0;
     margin: 0;
     box-sizing: border-box;
-    width: 1480px;
+    width: 1450px;
     height: auto;
   }
 
@@ -340,7 +340,7 @@
 
 /* Second Breakpoint - Ipad */
 
-@media (min-width: 1000px) and (max-width: 1280px) {
+@media (min-width: 900px) and (max-width: 1080px) {
   body {
     border: 0;
     margin: 0;
@@ -435,7 +435,7 @@
 
 /* Third Breakpoint - Mobile */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   body {
     border: 0;
     margin: 0;
