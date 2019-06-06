@@ -19,6 +19,9 @@ let logo = document.querySelector("#logo");
 let versus = document.querySelector("#versus");
 let interface = document.querySelector("#interface");
 let linkHome = document.querySelector(".rect");
+let dot1 = document.querySelector(".dot1");
+let dot2 = document.querySelector(".dot2");
+let dot3 = document.querySelector(".dot3");
 
 introDiv.addEventListener("click", startGame);
 
@@ -37,6 +40,9 @@ function startGame() {
   pass_svg.style.visibility = "visible";
   headshot_svg.style.visibility = "visible";
   linkHome.style.visibility = "visible";
+  dot1.style.visibility = "visible";
+  dot2.style.visibility = "visible";
+  dot3.style.visibility = "visible";
   let sound = document.getElementById("tada");
   sound.play();
 }
