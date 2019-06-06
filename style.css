@@ -155,6 +155,12 @@ table {
   .danskspill-logo {
     display: none;
   }
+  .reward {
+    font-size: 0.6em;
+  }
+  .some {
+    display: none;
+  }
 
   section {
     display: grid;
@@ -172,6 +178,9 @@ table {
     grid-column: 1/4;
     text-align: center;
     margin-top: 20px;
+  }
+  .some {
+    display: none;
   }
   .intro-index {
     grid-row: 3/4;
@@ -238,6 +247,7 @@ table {
     margin: 0 auto;
     margin-top: 20px;
   }
+
   .paragraphe2-about {
     grid-column: 1/4;
     grid-row: 3/6;
@@ -302,6 +312,9 @@ table {
   .danskspill-logo {
     display: none;
   }
+  .reward {
+    font-size: 0.6em;
+  }
 
   section {
     display: grid;
@@ -319,6 +332,9 @@ table {
     grid-column: 1/5;
     text-align: center;
     margin-top: 20px;
+  }
+  .some {
+    display: none;
   }
   .background-ellipse-mobile {
     display: none;
@@ -457,7 +473,19 @@ table {
     grid-template-rows: repeat(8, 1fr);
     overflow: hidden;
   }
-
+  .some {
+    grid-row: 8/9;
+    display: grid;
+    grid-template-columns: 30px 30px 30px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    grid-gap: 10px;
+    align-self: end;
+    font-size: 1em;
+  }
+  .social:hover {
+    color: orange;
+  }
   .play {
     position: relative;
     text-transform: uppercase;
@@ -601,12 +629,14 @@ table {
     animation-duration: 2s;
     animation-fill-mode: forwards;
     opacity: 0;
-    top: 20px;
+    top: -15px;
     margin-left: 80px;
   }
   .reward {
     font-size: 0.7em;
     color: white;
+    position: relative;
+    top: 5px;
   }
 
   /*About page*/
