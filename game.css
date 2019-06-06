@@ -1,0 +1,530 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap");
+
+#intro {
+  cursor: pointer;
+}
+
+/* ----- SVG Classes ----- */
+
+.st0 {
+  fill: url(#SVGID_1_);
+}
+.st1 {
+  fill: url(#SVGID_2_);
+}
+.st2 {
+  fill: url(#SVGID_3_);
+}
+.st3 {
+  fill: #ffffff;
+}
+.st4 {
+  fill: none;
+  stroke: url(#SVGID_4_);
+  stroke-width: 7.7363;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st5 {
+  fill: #ed1c24;
+}
+.st6 {
+  opacity: 0.7;
+  fill: #f2f2f2;
+  enable-background: new;
+}
+.st7 {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 1.5473;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st8 {
+  fill: #003e99;
+}
+.st9 {
+  stroke: #000000;
+  stroke-width: 1.5473;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st10 {
+  fill: #ffffff;
+  stroke: #000000;
+  stroke-width: 1.5473;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st11 {
+  fill: none;
+}
+.st12 {
+  enable-background: new;
+}
+.st13 {
+  fill: url(#SVGID_5_);
+}
+.st14 {
+  fill: url(#SVGID_6_);
+}
+.st15 {
+  fill: url(#SVGID_7_);
+}
+.st16 {
+  fill: none;
+  stroke: url(#SVGID_8_);
+  stroke-width: 7.7363;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st17 {
+  fill: #f2f2f2;
+}
+.st18 {
+  fill: #c69c6d;
+}
+.st19 {
+  fill: #cccccc;
+}
+.st20 {
+  fill: url(#SVGID_9_);
+  stroke: #000000;
+  stroke-width: 2.3209;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st21 {
+  fill: url(#SVGID_10_);
+  stroke: #000000;
+  stroke-width: 2.3209;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st22 {
+  opacity: 0.7;
+  fill: #1a1a1a;
+  enable-background: new;
+}
+.st23 {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 2.3209;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st24 {
+  fill: url(#SVGID_11_);
+  stroke: #ffffff;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+}
+.st25 {
+  fill: url(#SVGID_12_);
+  stroke: #ffffff;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+}
+.st26 {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2.4838;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+.st27 {
+  fill: url(#SVGID_13_);
+  stroke: #ffffff;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+}
+.st28 {
+  enable-background: new;
+}
+.st29 {
+  fill: url(#SVGID_14_);
+}
+
+/* ----- Animations start here ----- */
+
+/* Intro Game */
+
+#messi {
+  animation: moveRight 1.5s ease-in reverse forwards;
+}
+
+@keyframes moveRight {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(-75px);
+  }
+}
+
+#blob-vader {
+  animation: moveLeft 1.5s ease-in reverse forwards;
+}
+
+@keyframes moveLeft {
+  from {
+    transform: none;
+  }
+  to {
+    transform: translateX(75px);
+  }
+}
+#txt_make-move {
+  opacity: 0;
+  animation: appear 1.5s ease-in forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.choice:hover {
+  cursor: pointer;
+}
+
+.green-win {
+  stroke: rgb(113, 182, 10);
+  stroke-width: 8px;
+}
+
+.orange-lose {
+  stroke: #dc5f11;
+  stroke-width: 8px;
+}
+
+.gold-draw {
+  stroke: #ca9f11;
+  stroke-width: 8px;
+}
+
+#rules {
+  opacity: 0.5;
+}
+
+#rules:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+#therules {
+  cursor: pointer;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+/* First Breakpoint - Desktop */
+
+@media screen and (min-width: 1280px) {
+  body {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 1480px;
+    height: auto;
+  }
+
+  #background,
+  #logo,
+  #interface,
+  #versus,
+  #therules {
+    position: relative;
+    width: 1450px;
+    height: auto;
+  }
+  #background,
+  #logo,
+  #versus,
+  #interface,
+  #therules,
+  .score-board,
+  .result,
+  .dot1,
+  .dot2,
+  .dot3,
+  .rect {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .result,
+  .score-board {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+  }
+
+  .score-board {
+    color: #051c3e;
+    top: 260px;
+    left: 630px;
+    /* margin: 21% 42% auto 42%; */
+    font-size: 130px;
+  }
+
+  .result {
+    color: white;
+    /* margin: 37% auto auto 25%; */
+    top: 440px;
+    /* top: 55%; */
+    left: 400px;
+    font-size: 45px;
+  }
+  .dot1,
+  .dot2,
+  .dot3 {
+    height: 160px;
+    width: 160px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-box-shadow: 0px 0px 40px rgb(255, 255, 255);
+    box-shadow: 0px 0px 40px rgb(255, 255, 255);
+    animation: blink 1s infinite alternate;
+  }
+
+  .dot1 {
+    top: 600px;
+    left: 420px;
+  }
+
+  .dot2 {
+    top: 600px;
+    left: 650px;
+  }
+  .dot3 {
+    top: 600px;
+    left: 890px;
+  }
+
+  .rect {
+    height: 160px;
+    width: 260px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+/* Second Breakpoint - Ipad */
+
+@media (min-width: 1000px) and (max-width: 1280px) {
+  body {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 1025px;
+    height: auto;
+  }
+
+  #background,
+  #logo,
+  #interface,
+  #versus,
+  #therules {
+    position: relative;
+    width: 1025px;
+    height: auto;
+  }
+  #background,
+  #logo,
+  #versus,
+  #interface,
+  .score-board,
+  #therules,
+  .result,
+  .dot1,
+  .dot2,
+  .dot3,
+  .rect {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .result,
+  .score-board {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+  }
+
+  .score-board {
+    color: #051c3e;
+    top: 185px;
+    left: 450px;
+    /* margin: 21% 42% auto 42%; */
+    font-size: 90px;
+    /* display: grid;
+  grid-template: "" "" "" "versus" "" "";
+  grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
+  }
+
+  .result {
+    color: white;
+    /* margin: 37% auto auto 25%; */
+    top: 310px;
+    /* top: 55%; */
+    left: 300px;
+    font-size: 32px;
+  }
+  .dot1,
+  .dot2,
+  .dot3 {
+    height: 110px;
+    width: 110px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-box-shadow: 0px 0px 30px rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px rgb(255, 255, 255);
+    animation: blink 1s infinite alternate;
+  }
+
+  .dot1 {
+    top: 425px;
+    left: 298px;
+  }
+
+  .dot2 {
+    top: 425px;
+    left: 460px;
+  }
+  .dot3 {
+    top: 425px;
+    left: 630px;
+  }
+
+  .rect {
+    height: 100px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+/* Third Breakpoint - Mobile */
+
+@media screen and (max-width: 1000px) {
+  body {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 768px;
+    height: auto;
+  }
+
+  #background,
+  #logo,
+  #interface,
+  #versus,
+  #therules {
+    position: relative;
+    width: 768px;
+    height: auto;
+  }
+
+  #background,
+  #logo,
+  #versus,
+  #interface,
+  .score-board,
+  .result,
+  .dot1,
+  .dot2,
+  .dot3,
+  .rect,
+  #therules {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .result,
+  .score-board {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+  }
+
+  .score-board {
+    color: #051c3e;
+    top: 135px;
+    left: 335px;
+    /* margin: 21% 42% auto 42%; */
+    font-size: 70px;
+    /* display: grid;
+  grid-template: "" "" "" "versus" "" "";
+  grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
+  }
+
+  .result {
+    color: white;
+    /* margin: 37% auto auto 25%; */
+    top: 240px;
+    /* top: 55%; */
+    left: 245px;
+    font-size: 20px;
+  }
+  .dot1,
+  .dot2,
+  .dot3 {
+    height: 80px;
+    width: 80px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-box-shadow: 0px 0px 40px rgb(255, 255, 255);
+    box-shadow: 0px 0px 40px rgb(255, 255, 255);
+    animation: blink 1s infinite alternate;
+  }
+
+  .dot1 {
+    top: 320px;
+    left: 225px;
+  }
+
+  .dot2 {
+    top: 320px;
+    left: 345px;
+  }
+  .dot3 {
+    top: 320px;
+    left: 475px;
+  }
+
+  .rect {
+    height: 80px;
+    width: 140px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
