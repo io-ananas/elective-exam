@@ -1,17 +1,8 @@
+//variables
 const data = {};
 const form = document.querySelector("form");
 ("use strict");
-/*
-//Js validity
-form.elements.Email.addEventListener("blur", e => {
-  if (form.elements.Email.checkValidity()) {
-    console.log("correct");
-  } else {
-    console.log("please add an email");
-    alert("please add an email in order to register");
-  }
-});
-*/
+
 function post(newUsers) {
   fetch("https://testdb-6ac0.restdb.io/rest/oddset-users", {
     method: "post",
@@ -28,7 +19,7 @@ function post(newUsers) {
     .then(data => {
       //console.log(data);
       if (data.message) {
-        //unhappy
+        // Email already exists
         const generalError = data.message;
         const field = data.list[0].field;
         const specificError = data.list[0].message[0];
@@ -37,7 +28,7 @@ function post(newUsers) {
         //TODO: show error
         alert("The " + field + " " + specificError);
       } else {
-        //happy
+        // email successful
         form.style.display = "none";
         document.querySelector(".validated-page ").style.display = "block";
         document.querySelector(".validated-page  span").textContent =
@@ -59,3 +50,15 @@ form.addEventListener("submit", e => {
   //function that start to run and call the first function post
   post(obj);
 });
+
+/*
+//Js validity
+form.elements.Email.addEventListener("blur", e => {
+  if (form.elements.Email.checkValidity()) {
+    console.log("correct");
+  } else {
+    console.log("please add an email");
+    alert("please add an email in order to register");
+  }
+});
+*/
