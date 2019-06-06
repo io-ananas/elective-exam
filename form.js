@@ -22,16 +22,18 @@ function post(newUsers) {
       "cache-control": "no-cache"
     }
   })
+    //get response format as json
     .then(res => res.json())
+    //response call data
     .then(data => {
-      console.log(data);
+      //console.log(data);
       if (data.message) {
         //unhappy
         const generalError = data.message;
         const field = data.list[0].field;
         const specificError = data.list[0].message[0];
-        // console.log(generalError, specificError, field);
-        // console.log("the " + field + specificError);
+        console.log(generalError, specificError, field);
+        //console.log("the " + field + specificError);
         //TODO: show error
         alert("The " + field + " " + specificError);
       } else {
@@ -49,11 +51,11 @@ function post(newUsers) {
 form.addEventListener("submit", e => {
   form.elements.submit.disabled = true;
   e.preventDefault();
-  console.log("submitted");
+  //console.log("submitted");
   const obj = {
     name: form.elements.Name.value,
     email: form.elements.Email.value
   };
-
+  //function that start to run and call the first function post
   post(obj);
 });
