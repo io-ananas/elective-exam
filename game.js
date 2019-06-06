@@ -41,6 +41,21 @@ function startGame() {
   sound.play();
 }
 
+// Rules
+let buttonRules = document.querySelector("#rules");
+let rules = document.querySelector("#therules");
+
+buttonRules.addEventListener("click", rulesDisplay);
+
+function rulesDisplay() {
+  rules.style.visibility = "visible";
+}
+
+rules.addEventListener("click", rulesClosed);
+function rulesClosed() {
+  rules.style.visibility = "hidden";
+}
+
 // get Computer choice
 function getComputerChoice() {
   const choices = ["Tackle", "Pass", "Headshot"];

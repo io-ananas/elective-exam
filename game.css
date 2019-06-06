@@ -224,6 +224,9 @@
   opacity: 1;
   cursor: pointer;
 }
+#therules {
+  cursor: pointer;
+}
 
 @keyframes blink {
   from {
@@ -257,7 +260,8 @@
   #background,
   #logo,
   #interface,
-  #versus {
+  #versus,
+  #therules {
     position: relative;
     width: 1450px;
     height: auto;
@@ -266,6 +270,7 @@
   #logo,
   #versus,
   #interface,
+  #therules,
   .score-board,
   .result,
   .dot1,
@@ -347,7 +352,8 @@
   #background,
   #logo,
   #interface,
-  #versus {
+  #versus,
+  #therules {
     position: relative;
     width: 1025px;
     height: auto;
@@ -357,6 +363,7 @@
   #versus,
   #interface,
   .score-board,
+  #therules,
   .result,
   .dot1,
   .dot2,
@@ -440,7 +447,8 @@
   #background,
   #logo,
   #interface,
-  #versus {
+  #versus,
+  #therules {
     position: relative;
     width: 768px;
     height: auto;
@@ -455,7 +463,8 @@
   .dot1,
   .dot2,
   .dot3,
-  .rect {
+  .rect,
+  #therules {
     visibility: hidden;
     position: absolute;
     top: 0px;
