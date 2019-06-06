@@ -995,7 +995,7 @@ min-width: 995px
   .linkpageabout {
     grid-column: 2;
     position: relative;
-    opacity: 0.3;
+    opacity: 1;
   }
 
   .linkpageabout:hover {
