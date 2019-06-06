@@ -703,6 +703,9 @@ tablet
     color: white;
     transition: 1s;
   }
+  .active {
+    opacity: 1;
+  }
 
   .highlight {
     color: white;
@@ -995,9 +998,11 @@ min-width: 995px
   .linkpageabout {
     grid-column: 2;
     position: relative;
+    opacity: 0.3;
+  }
+  .active {
     opacity: 1;
   }
-
   .linkpageabout:hover {
     color: white;
     transition: 1s;
