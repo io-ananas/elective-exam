@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap");
 
+#intro {
+  cursor: pointer;
+}
+
 /* ----- SVG Classes ----- */
 
 .st0 {
@@ -179,7 +183,6 @@
     transform: translateX(75px);
   }
 }
-
 #txt_make-move {
   opacity: 0;
   animation: appear 1.5s ease-in forwards;
@@ -259,7 +262,7 @@
     width: 1450px;
     height: auto;
   }
-
+  #background,
   #logo,
   #versus,
   #interface,
@@ -269,6 +272,7 @@
   .dot2,
   .dot3,
   .rect {
+    visibility: hidden;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -348,7 +352,7 @@
     width: 1025px;
     height: auto;
   }
-
+  #background,
   #logo,
   #versus,
   #interface,
@@ -358,6 +362,7 @@
   .dot2,
   .dot3,
   .rect {
+    visibility: hidden;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -441,6 +446,7 @@
     height: auto;
   }
 
+  #background,
   #logo,
   #versus,
   #interface,
@@ -450,6 +456,7 @@
   .dot2,
   .dot3,
   .rect {
+    visibility: hidden;
     position: absolute;
     top: 0px;
     left: 0px;
