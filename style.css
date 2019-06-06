@@ -713,15 +713,17 @@ tablet
     grid-row: 3 /5;
     position: relative;
     top: -30px;
+    line-height: 10px;
   }
   .paragraphe2-about {
     grid-column: 5/9;
     grid-row: 3/7;
     margin-left: 30px;
     margin-right: 40px;
+    line-height: 10px;
   }
   .link-official-website {
-    grid-row: 5;
+    grid-row: 6;
     grid-column: 5/9;
     margin-left: 30px;
     margin-top: 40px;
@@ -1011,13 +1013,15 @@ min-width: 995px
     grid-row: 3 /5;
     position: relative;
     top: -30px;
+    line-height: 20px;
   }
   .paragraphe2-about {
     grid-column: 6/8;
     grid-row: 3/7;
+    line-height: 20px;
   }
   .link-official-website {
-    grid-row: 5;
+    grid-row: 6;
     grid-column: 6/8;
     margin-top: 30px;
     opacity: 0.3;
