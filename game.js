@@ -12,6 +12,35 @@ const tackle_svg = document.getElementById("tackle");
 const pass_svg = document.getElementById("pass");
 const headshot_svg = document.getElementById("headshot");
 
+// Intro
+let introDiv = document.querySelector("#intro");
+let background = document.querySelector("#background");
+let logo = document.querySelector("#logo");
+let versus = document.querySelector("#versus");
+let interface = document.querySelector("#interface");
+let linkHome = document.querySelector(".rect");
+
+introDiv.addEventListener("click", startGame);
+
+function startGame() {
+  introDiv.style.display = "none";
+  interface.style.visibility = "visible";
+  background.style.visibility = "visible";
+  logo.style.visibility = "visible";
+  versus.style.visibility = "visible";
+  interface.style.visibility = "visible";
+  computerScore_span.style.visibility = "visible";
+  userScore_span.style.visibility = "visible";
+  scoreBoard_div.style.visibility = "visible";
+  result_p.style.visibility = "visible";
+  tackle_svg.style.visibility = "visible";
+  pass_svg.style.visibility = "visible";
+  headshot_svg.style.visibility = "visible";
+  linkHome.style.visibility = "visible";
+  let sound = document.getElementById("tada");
+  sound.play();
+}
+
 // get Computer choice
 function getComputerChoice() {
   const choices = ["Tackle", "Pass", "Headshot"];

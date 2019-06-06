@@ -1,33 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap");
 
-body {
-  border: 0;
-  margin: 0;
-  box-sizing: border-box;
-  width: 1480px;
-  height: auto;
-}
-
-#background,
-#logo,
-#interface,
-#versus {
-  position: relative;
-  width: 1450px;
-  height: auto;
-}
-
-#logo,
-#versus,
-#interface,
-.score-board,
-.result,
-.dot1,
-.dot2,
-.dot3, .rect {
-  position: absolute;
-  top: 0px;
-  left: 0px;
+#intro {
+  cursor: pointer;
 }
 
 /* ----- SVG Classes ----- */
@@ -209,7 +183,6 @@ body {
     transform: translateX(75px);
   }
 }
-
 #txt_make-move {
   opacity: 0;
   animation: appear 1.5s ease-in forwards;
@@ -222,31 +195,6 @@ body {
   to {
     opacity: 1;
   }
-}
-
-.result,
-.score-board {
-  font-family: "Rubik", sans-serif;
-  font-weight: bold;
-}
-
-.score-board {
-  color: #051c3e;
-  top: 260px;
-  left: 630px;
-  /* margin: 21% 42% auto 42%; */
-  font-size: 130px;
-  /* display: grid;
-  grid-template: "" "" "" "versus" "" "";
-  grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
-}
-
-.result {
-  color: white;
-  /* margin: 37% auto auto 25%; */
-  top: 440px;
-  left: 400px;
-  font-size: 45px;
 }
 
 .choice:hover {
@@ -277,31 +225,13 @@ body {
   cursor: pointer;
 }
 
-.dot1,
-.dot2,
-.dot3 {
-  height: 160px;
-  width: 160px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 50%;
-  display: inline-block;
-  -webkit-box-shadow: 0px 0px 40px rgb(255, 255, 255);
-  box-shadow: 0px 0px 40px rgb(255, 255, 255);
-  animation: blink 1s infinite alternate;
-}
-
-.dot1 {
-  top: 600px;
-  left: 420px;
-}
-
-.dot2 {
-  top: 600px;
-  left: 650px;
-}
-.dot3 {
-  top: 600px;
-  left: 890px;
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
 }
 
 @keyframes blink {
@@ -313,7 +243,279 @@ body {
   }
 }
 
-.rect {
-  height: 160px;
-  width: 260px;
-  background-color: rgba(255, 255, 255, 0);
+/* First Breakpoint - Desktop */
+
+@media screen and (min-width: 1280px) {
+  body {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 1480px;
+    height: auto;
+  }
+
+  #background,
+  #logo,
+  #interface,
+  #versus {
+    position: relative;
+    width: 1450px;
+    height: auto;
+  }
+  #background,
+  #logo,
+  #versus,
+  #interface,
+  .score-board,
+  .result,
+  .dot1,
+  .dot2,
+  .dot3,
+  .rect {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .result,
+  .score-board {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+  }
+
+  .score-board {
+    color: #051c3e;
+    top: 260px;
+    left: 630px;
+    /* margin: 21% 42% auto 42%; */
+    font-size: 130px;
+  }
+
+  .result {
+    color: white;
+    /* margin: 37% auto auto 25%; */
+    top: 440px;
+    /* top: 55%; */
+    left: 400px;
+    font-size: 45px;
+  }
+  .dot1,
+  .dot2,
+  .dot3 {
+    height: 160px;
+    width: 160px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-box-shadow: 0px 0px 40px rgb(255, 255, 255);
+    box-shadow: 0px 0px 40px rgb(255, 255, 255);
+    animation: blink 1s infinite alternate;
+  }
+
+  .dot1 {
+    top: 600px;
+    left: 420px;
+  }
+
+  .dot2 {
+    top: 600px;
+    left: 650px;
+  }
+  .dot3 {
+    top: 600px;
+    left: 890px;
+  }
+
+  .rect {
+    height: 160px;
+    width: 260px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+/* Second Breakpoint - Ipad */
+
+@media (min-width: 1000px) and (max-width: 1280px) {
+  body {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 1025px;
+    height: auto;
+  }
+
+  #background,
+  #logo,
+  #interface,
+  #versus {
+    position: relative;
+    width: 1025px;
+    height: auto;
+  }
+  #background,
+  #logo,
+  #versus,
+  #interface,
+  .score-board,
+  .result,
+  .dot1,
+  .dot2,
+  .dot3,
+  .rect {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .result,
+  .score-board {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+  }
+
+  .score-board {
+    color: #051c3e;
+    top: 185px;
+    left: 450px;
+    /* margin: 21% 42% auto 42%; */
+    font-size: 90px;
+    /* display: grid;
+  grid-template: "" "" "" "versus" "" "";
+  grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
+  }
+
+  .result {
+    color: white;
+    /* margin: 37% auto auto 25%; */
+    top: 310px;
+    /* top: 55%; */
+    left: 300px;
+    font-size: 32px;
+  }
+  .dot1,
+  .dot2,
+  .dot3 {
+    height: 110px;
+    width: 110px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-box-shadow: 0px 0px 30px rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px rgb(255, 255, 255);
+    animation: blink 1s infinite alternate;
+  }
+
+  .dot1 {
+    top: 425px;
+    left: 298px;
+  }
+
+  .dot2 {
+    top: 425px;
+    left: 460px;
+  }
+  .dot3 {
+    top: 425px;
+    left: 630px;
+  }
+
+  .rect {
+    height: 100px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+/* Third Breakpoint - Mobile */
+
+@media screen and (max-width: 1000px) {
+  body {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 768px;
+    height: auto;
+  }
+
+  #background,
+  #logo,
+  #interface,
+  #versus {
+    position: relative;
+    width: 768px;
+    height: auto;
+  }
+
+  #background,
+  #logo,
+  #versus,
+  #interface,
+  .score-board,
+  .result,
+  .dot1,
+  .dot2,
+  .dot3,
+  .rect {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .result,
+  .score-board {
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+  }
+
+  .score-board {
+    color: #051c3e;
+    top: 135px;
+    left: 335px;
+    /* margin: 21% 42% auto 42%; */
+    font-size: 70px;
+    /* display: grid;
+  grid-template: "" "" "" "versus" "" "";
+  grid-auto-rows: 1fr 1fr 1fr 1fr 1fr 1fr; */
+  }
+
+  .result {
+    color: white;
+    /* margin: 37% auto auto 25%; */
+    top: 240px;
+    /* top: 55%; */
+    left: 245px;
+    font-size: 20px;
+  }
+  .dot1,
+  .dot2,
+  .dot3 {
+    height: 80px;
+    width: 80px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-box-shadow: 0px 0px 40px rgb(255, 255, 255);
+    box-shadow: 0px 0px 40px rgb(255, 255, 255);
+    animation: blink 1s infinite alternate;
+  }
+
+  .dot1 {
+    top: 320px;
+    left: 225px;
+  }
+
+  .dot2 {
+    top: 320px;
+    left: 345px;
+  }
+  .dot3 {
+    top: 320px;
+    left: 475px;
+  }
+
+  .rect {
+    height: 80px;
+    width: 140px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
